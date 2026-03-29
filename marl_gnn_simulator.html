@@ -1,0 +1,538 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans,sans-serif)}
+.wrap{padding:12px 0}
+.top{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.panel{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:12px;padding:12px}
+.panel-title{font-size:13px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em}
+canvas#net{width:100%;border-radius:8px;background:#1a2540;display:block}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:6px}
+.stat-card{background:var(--color-background-secondary);border-radius:8px;padding:8px 10px;text-align:center}
+.stat-val{font-size:20px;font-weight:500;color:var(--color-text-primary)}
+.stat-lbl{font-size:11px;color:var(--color-text-secondary);margin-top:2px}
+.btns{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;align-items:center}
+button{font-size:13px;padding:6px 14px;border-radius:8px;border:0.5px solid var(--color-border-secondary);background:transparent;cursor:pointer;color:var(--color-text-primary)}
+button:hover{background:var(--color-background-secondary)}
+button.primary{background:#1F3864;color:#fff;border-color:#1F3864}
+button.primary:hover{background:#2E75B6;border-color:#2E75B6}
+button.danger{background:#C0392B;color:#fff;border-color:#C0392B}
+.speed-row{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--color-text-secondary)}
+input[type=range]{flex:1;max-width:100px}
+.log-box{background:var(--color-background-secondary);border-radius:8px;padding:8px 10px;font-size:12px;font-family:var(--font-mono,monospace);max-height:130px;overflow-y:auto;color:var(--color-text-secondary);line-height:1.7}
+.log-box .ok{color:#1D9E75}.log-box .warn{color:#BA7517}.log-box .err{color:#E24B4A}
+.param-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.param-row{display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.param-row:last-child{border-bottom:none}
+.pk{color:var(--color-text-secondary)}.pv{font-family:var(--font-mono,monospace);font-weight:500;color:var(--color-text-primary)}
+.node-detail{background:var(--color-background-secondary);border-radius:8px;padding:8px 10px;font-size:12px}
+.nd-title{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px}
+.channel-pills{display:flex;gap:4px;flex-wrap:wrap;margin:4px 0}
+.pill{padding:2px 8px;border-radius:20px;font-size:11px;font-weight:500}
+.ch0{background:#E6F1FB;color:#0C447C}.ch1{background:#E1F5EE;color:#085041}
+.ch2{background:#FAEEDA;color:#633806}.ch3{background:#FCEBEB;color:#791F1F}
+.badge{display:inline-block;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:500}
+.badge-ok{background:#EAF3DE;color:#27500A}.badge-err{background:#FCEBEB;color:#791F1F}
+.flow-box{background:var(--color-background-secondary);border-radius:8px;padding:8px 10px;font-size:12px;line-height:1.8}
+.step-active{color:#1D9E75;font-weight:500}
+.step-done{color:var(--color-text-secondary);text-decoration:line-through}
+.step-wait{color:var(--color-text-tertiary)}
+#net {
+  background: #1a2540;
+  border-radius: 8px;
+  display: block;
+  /* 💡 ล็อกขนาดคงที่ไว้ ไม่ให้มันขยายเอง */
+  width: 500px !important; 
+  height: 400px !important;
+}
+</style>
+
+<div class="wrap">
+<div class="btns">
+  <button class="primary" id="btnStep" onclick="step()">Step เดียว</button>
+  <button class="primary" id="btnRun" onclick="toggleRun()">Auto Run</button>
+  <button onclick="resetSim()">รีเซ็ต</button>
+  <button onclick="randomize()">สุ่มใหม่</button>
+  <div class="speed-row">
+    <span>ความเร็ว</span>
+    <input type="range" id="speedSlider" min="1" max="10" value="4" step="1" oninput="setSpeed(this.value)">
+    <span id="speedLbl">4x</span>
+  </div>
+  <span id="epLbl" style="font-size:13px;color:var(--color-text-secondary);margin-left:4px"></span>
+</div>
+
+<div class="top">
+  <div class="panel">
+    <div class="panel-title">แผนที่เครือข่าย Wi-Fi Mesh</div>
+    <canvas id="net" width="380" height="280"></canvas>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
+      <span style="font-size:11px;color:var(--color-text-secondary)">ช่อง:</span>
+      <span class="pill ch0">0 - ฟ้า</span>
+      <span class="pill ch1">1 - เขียว</span>
+      <span class="pill ch2">2 - เหลือง</span>
+      <span class="pill ch3">3 - แดง</span>
+      <span style="font-size:11px;color:var(--color-text-secondary);margin-left:4px">เส้นประ = ระยะรบกวน</span>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:8px">
+    <div class="panel">
+      <div class="panel-title">สถิติระบบ</div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-val" id="sReward">0.00</div><div class="stat-lbl">Avg Reward</div></div>
+        <div class="stat-card"><div class="stat-val" id="sCI">0.00</div><div class="stat-lbl">Avg CI</div></div>
+        <div class="stat-card"><div class="stat-val" id="sEps">1.00</div><div class="stat-lbl">Epsilon ε</div></div>
+        <div class="stat-card"><div class="stat-val" id="sStep">0</div><div class="stat-lbl">Step</div></div>
+        <div class="stat-card"><div class="stat-val" id="sEp">0</div><div class="stat-lbl">Episode</div></div>
+        <div class="stat-card"><div class="stat-val" id="sConflict">0</div><div class="stat-lbl">Conflict pairs</div></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Hyperparameters</div>
+      <div class="param-grid">
+        <div>
+          <div class="param-row"><span class="pk">N (โหนด)</span><span class="pv">15</span></div>
+          <div class="param-row"><span class="pk">C (ช่องสัญญาณ)</span><span class="pv">4</span></div>
+          <div class="param-row"><span class="pk">r_interference</span><span class="pv">30 หน่วย</span></div>
+          <div class="param-row"><span class="pk">Area size</span><span class="pv">150×150</span></div>
+        </div>
+        <div>
+          <div class="param-row"><span class="pk">γ (discount)</span><span class="pv">0.9</span></div>
+          <div class="param-row"><span class="pk">α (lr)</span><span class="pv">0.001</span></div>
+          <div class="param-row"><span class="pk">ε_decay</span><span class="pv">0.995</span></div>
+          <div class="param-row"><span class="pk">β (CI penalty)</span><span class="pv">5.0</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">ขั้นตอน MARL ปัจจุบัน</div>
+      <div class="flow-box" id="flowBox">
+        <div id="fl0" class="step-wait">① env.reset() — สุ่มช่องสัญญาณ</div>
+        <div id="fl1" class="step-wait">② Node ID + Channel → State vector</div>
+        <div id="fl2" class="step-wait">③ GNN: M = A·S (Aggregation)</div>
+        <div id="fl3" class="step-wait">④ GNN: h = ReLU(W·s) ∥ ReLU(W·m)</div>
+        <div id="fl4" class="step-wait">⑤ ε-Greedy → เลือก Action</div>
+        <div id="fl5" class="step-wait">⑥ Env: คำนวณ CI + Reward</div>
+        <div id="fl6" class="step-wait">⑦ Bellman Update → ε decay</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+  <div class="panel">
+    <div class="panel-title">Node Detail — คลิกโหนดในแผนที่</div>
+    <div class="node-detail" id="nodeDetail">
+      <div style="color:var(--color-text-secondary);font-size:12px">คลิกโหนดในแผนที่เพื่อดูรายละเอียด</div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-title">Log การส่งข้อมูล Node → Agent → Node</div>
+    <div class="log-box" id="logBox"></div>
+  </div>
+</div>
+</div>
+
+<script>
+const N=15, C=4, AREA=150, R_INT=30;
+const CH_COLORS=['#378ADD','#1D9E75','#EF9F27','#E24B4A'];
+const CH_NAMES=['ch0','ch1','ch2','ch3'];
+const CH_LIGHT=['#E6F1FB','#E1F5EE','#FAEEDA','#FCEBEB'];
+const CH_DARK=['#0C447C','#085041','#633806','#791F1F'];
+
+let nodes=[], adj=[], channels=[], qTable=[], eps=1.0;
+let episode=0, stepNum=0, running=false, timer=null, speed=4;
+let selectedNode=-1, totalReward=0, rewardCount=0;
+
+function initNodes(){
+  nodes=[];
+  for(let i=0;i<N;i++){
+    nodes.push({x:20+Math.random()*110, y:20+Math.random()*110, id:i});
+  }
+  buildAdj();
+  channels=Array.from({length:N},()=>Math.floor(Math.random()*C));
+  qTable=Array.from({length:N},()=>Array(C).fill(0));
+  eps=1.0; episode=0; stepNum=0; totalReward=0; rewardCount=0;
+  selectedNode=-1;
+}
+
+function buildAdj(){
+  adj=Array.from({length:N},()=>Array(N).fill(0));
+  for(let i=0;i<N;i++)for(let j=0;j<N;j++){
+    if(i===j) continue;
+    let dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y;
+    if(Math.sqrt(dx*dx+dy*dy)<R_INT) adj[i][j]=1;
+  }
+}
+
+function getState(i){ 
+  let s=Array(C+N).fill(0);
+  s[channels[i]]=1;
+  s[C+i]=1;
+  return s;
+}
+
+function gnnForward(i){
+  let si=getState(i);
+  let mi=Array(C+N).fill(0);
+  let nb=0;
+  for(let j=0;j<N;j++){
+    if(adj[i][j]){
+      let sj=getState(j);
+      for(let k=0;k<C+N;k++) mi[k]+=sj[k];
+      nb++;
+    }
+  }
+  if(nb>0) for(let k=0;k<C+N;k++) mi[k]/=nb;
+  return {si, mi, nb};
+}
+
+function computeCI(actions){
+  let ci=Array(N).fill(0);
+  for(let i=0;i<N;i++)
+    for(let j=0;j<N;j++)
+      if(adj[i][j]&&actions[j]===actions[i]) ci[i]++;
+  return ci;
+}
+
+function computeReward(i,ci_i){
+  let T=Math.max(0,10-3*ci_i);
+  return 1.0*T-5.0*ci_i;
+}
+
+function countConflictPairs(){
+  let c=0;
+  for(let i=0;i<N;i++)for(let j=i+1;j<N;j++)
+    if(adj[i][j]&&channels[i]===channels[j]) c++;
+  return c;
+}
+
+function setFlowStep(active){
+  for(let k=0;k<7;k++){
+    let el=document.getElementById('fl'+k);
+    if(k<active){el.className='step-done';}
+    else if(k===active){el.className='step-active';}
+    else{el.className='step-wait';}
+  }
+}
+
+function log(msg,cls=''){
+  let lb=document.getElementById('logBox');
+  let d=document.createElement('div');
+  if(cls) d.className=cls;
+  d.textContent=msg;
+  lb.appendChild(d);
+  lb.scrollTop=lb.scrollHeight;
+  if(lb.children.length>120) lb.removeChild(lb.children[0]);
+}
+
+function step(){
+  setFlowStep(0);
+  if(stepNum===0){
+    channels=Array.from({length:N},()=>Math.floor(Math.random()*C));
+    log(`── Ep ${episode+1} reset: ช่อง=[${channels.join(',')}]`,'');
+  }
+  setFlowStep(1);
+  let actions=[];
+  let infos=[];
+  for(let i=0;i<N;i++){
+    let {si,mi,nb}=gnnForward(i);
+    let chOH=si.slice(0,C);
+    let nodeID=si.slice(C);
+    infos.push({si,mi,nb,chOH,nodeID});
+  }
+
+  setFlowStep(2);
+  setFlowStep(3);
+
+  setFlowStep(4);
+  let explore=Math.random()<eps;
+  for(let i=0;i<N;i++){
+    let a;
+    if(explore) a=Math.floor(Math.random()*C);
+    else {
+      let qs=qTable[i];
+      a=qs.indexOf(Math.max(...qs));
+    }
+    actions.push(a);
+  }
+
+  setFlowStep(5);
+  let ci=computeCI(actions);
+  let rewards=actions.map((_,i)=>computeReward(i,ci[i]));
+  let avgR=rewards.reduce((a,b)=>a+b,0)/N;
+  let avgCI=ci.reduce((a,b)=>a+b,0)/N;
+  totalReward+=avgR; rewardCount++;
+
+  setFlowStep(6);
+  for(let i=0;i<N;i++){
+    let gamma=0.9, alpha=0.001;
+    let nextA=Math.max(...qTable[i]);
+    let target=rewards[i]+gamma*nextA;
+    qTable[i][actions[i]]+=alpha*(target-qTable[i][actions[i]]);
+  }
+
+  channels=[...actions];
+  stepNum++;
+
+  if(selectedNode>=0){
+    let i=selectedNode;
+    let {si,mi,nb}=infos[i];
+    let chOH=si.slice(0,C).map(v=>v.toFixed(0));
+    let nid=si.slice(C).map(v=>v.toFixed(0));
+    log(`Node ${i} → State: ch=[${chOH}] ID=[${nid.join(',')}]`,'ok');
+    log(`  GNN: ${nb}เพื่อนบ้าน, m=[${mi.slice(0,C).map(v=>v.toFixed(2))}]`,'');
+    log(`  Q=${qTable[i].map(v=>v.toFixed(2))} → ch${actions[i]} (${explore?'explore':'exploit'})`,'');
+    log(`  CI=${ci[i]} r=${rewards[i].toFixed(2)}`,(ci[i]>0?'warn':'ok'));
+  } else {
+    let bad=ci.filter(v=>v>0).length;
+    if(bad>0) log(`Step ${stepNum}: ${bad}โหนดมี CI | avgR=${avgR.toFixed(2)}`,'warn');
+    else log(`Step ${stepNum}: ไม่มีการชนกัน | avgR=${avgR.toFixed(2)}`,'ok');
+  }
+
+  if(stepNum>=20){
+    eps=Math.max(0.05,eps*0.995);
+    episode++; stepNum=0;
+    log(`── Ep ${episode} จบ | ε=${eps.toFixed(3)}`,'');
+  }
+
+  updateStats(avgR,avgCI);
+  draw();
+  if(selectedNode>=0) showNodeDetail(selectedNode);
+  document.getElementById('epLbl').textContent=`Ep ${episode+1} | Step ${stepNum}/20`;
+  setFlowStep(stepNum===0?0:6);
+}
+
+function updateStats(r,ci){
+  document.getElementById('sReward').textContent=(totalReward/Math.max(1,rewardCount)).toFixed(2);
+  document.getElementById('sCI').textContent=ci.toFixed(2);
+  document.getElementById('sEps').textContent=eps.toFixed(3);
+  document.getElementById('sStep').textContent=stepNum;
+  document.getElementById('sEp').textContent=episode;
+  document.getElementById('sConflict').textContent=countConflictPairs();
+}
+
+function showNodeDetail(i){
+  selectedNode=i;
+  let nb=[];
+  for(let j=0;j<N;j++) if(adj[i][j]) nb.push(j);
+  let ci_val=0;
+  for(let j of nb) if(channels[j]===channels[i]) ci_val++;
+  let T=Math.max(0,10-3*ci_val);
+  let r=1.0*T-5.0*ci_val;
+  let qs=qTable[i];
+  let bestCh=qs.indexOf(Math.max(...qs));
+  let chOH=Array(C).fill(0); chOH[channels[i]]=1;
+  let nidOH=Array(N).fill(0); nidOH[i]=1;
+
+  document.getElementById('nodeDetail').innerHTML=`
+<div class="nd-title">AP Node ${i} <span class="badge ${ci_val>0?'badge-err':'badge-ok'}">${ci_val>0?'มี CI':'ไม่มี CI'}</span></div>
+<div class="param-row"><span class="pk">ตำแหน่ง</span><span class="pv">(${nodes[i].x.toFixed(1)}, ${nodes[i].y.toFixed(1)})</span></div>
+<div class="param-row"><span class="pk">ช่องปัจจุบัน</span><span class="pv"><span class="pill ${CH_NAMES[channels[i]]}">ch${channels[i]}</span></span></div>
+<div class="param-row"><span class="pk">เพื่อนบ้านรอบข้าง</span><span class="pv">${nb.length} โหนด [${nb.join(',')}]</span></div>
+<div class="param-row"><span class="pk">CI_${i}</span><span class="pv" style="color:${ci_val>0?'#E24B4A':'#1D9E75'}">${ci_val}</span></div>
+<div class="param-row"><span class="pk">Throughput</span><span class="pv">${T.toFixed(1)}</span></div>
+<div class="param-row"><span class="pk">Reward r_${i}</span><span class="pv" style="color:${r<0?'#E24B4A':'#1D9E75'}">${r.toFixed(2)}</span></div>
+<div style="margin-top:6px;font-size:11px;color:var(--color-text-secondary);margin-bottom:3px">State vector ส่งให้ Agent:</div>
+<div style="font-family:var(--font-mono,monospace);font-size:11px;background:var(--color-background-tertiary);padding:4px 6px;border-radius:6px;word-break:break-all">
+ch_OH=[${chOH}] | NodeID=[${nidOH.join(',')}]
+</div>
+<div style="margin-top:6px;font-size:11px;color:var(--color-text-secondary);margin-bottom:3px">Q-values ที่ Agent ส่งกลับ:</div>
+<div class="channel-pills">
+${qs.map((q,k)=>`<span class="pill ${CH_NAMES[k]}" style="font-family:var(--font-mono,monospace)">${k===bestCh?'★':''}ch${k}=${q.toFixed(2)}</span>`).join('')}
+</div>`;
+}
+
+function draw() {
+  const canvas = document.getElementById('net');
+  if (!canvas || nodes.length === 0) return; // 💡 ป้องกันหน้าจอมืดถ้าข้อมูลยังไม่มา
+
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const logicalWidth = 500;
+  const logicalHeight = 400;
+
+  canvas.width = logicalWidth * dpr;
+  canvas.height = logicalHeight * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, logicalWidth, logicalHeight);
+
+  // กำหนดสีสำรองในกรณีที่ CH_COLORS หรือ COLORS หายไป
+  const myColors = ['#378ADD', '#1D9E75', '#EF9F27', '#E24B4A'];
+  const pad = 40;
+  const scaleX = (logicalWidth - pad * 2) / 150;
+  const scaleY = (logicalHeight - pad * 2) / 150;
+
+  // วาดเส้นประ
+  if (adj && adj.length > 0) {
+    for (let i = 0; i < N; i++) {
+      for (let j = i + 1; j < N; j++) {
+        if (adj[i] && adj[i][j] === 1) {
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x * scaleX + pad, nodes[i].y * scaleY + pad);
+          ctx.lineTo(nodes[j].x * scaleX + pad, nodes[j].y * scaleY + pad);
+          ctx.strokeStyle = (channels[i] === channels[j]) ? 'rgba(255, 77, 77, 0.8)' : 'rgba(255, 255, 255, 0.1)';
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  // วาดโหนด
+  nodes.forEach((n, i) => {
+    ctx.beginPath();
+    ctx.arc(n.x * scaleX + pad, n.y * scaleY + pad, 12, 0, Math.PI * 2);
+    ctx.fillStyle = myColors[channels[i] || 0]; // 💡 ใช้ || 0 กัน Error ถ้าช่องเป็น undefined
+    ctx.fill();
+    ctx.fillStyle = '#fff';
+    ctx.fillText(i, n.x * scaleX + pad, n.y * scaleY + pad);
+  });
+}
+
+// ค้นหา Canvas ให้เจอแน่นอนก่อนสร้าง Listener
+const canvasElement = document.getElementById('net');
+
+canvasElement.onclick = function(e) {
+  const rect = canvasElement.getBoundingClientRect();
+  
+  // คำนวณตำแหน่งเมาส์สัมพันธ์กับขนาด Canvas จริง
+  const xInCanvas = e.clientX - rect.left;
+  const yInCanvas = e.clientY - rect.top;
+  
+  // แปลงพิกัดหน้าจอเป็นพิกัดในระบบจำลอง (0-150)
+  const scaleX = canvasElement.width / rect.width;
+  const scaleY = canvasElement.height / rect.height;
+  
+  const mx = xInCanvas * scaleX;
+  const my = yInCanvas * scaleY;
+  
+  // ตัวแปรช่วยวาด
+  const drawScaleX = (canvasElement.width - 30) / AREA;
+  const drawScaleY = (canvasElement.height - 30) / AREA;
+
+  let best = -1, bestD = 999;
+  
+  for(let i=0; i<N; i++){
+    // พิกัดโหนดที่วาดบน Canvas
+    let nx = nodes[i].x * drawScaleX + 15;
+    let ny = nodes[i].y * drawScaleY + 15;
+    
+    let d = Math.sqrt((mx - nx)**2 + (my - ny)**2);
+    
+    // ขยายรัศมีให้คลิกง่ายขึ้นเป็น 30 หน่วย
+    if(d < 30 && d < bestD){ 
+      bestD = d; 
+      best = i; 
+    }
+  }
+  
+  if(best >= 0){
+    showNodeDetail(best);
+    log(`🎯 เลือก Node ${best} แล้ว`, 'ok');
+  } else {
+    selectedNode = -1;
+    document.getElementById('nodeDetail').innerHTML = '<div style="color:var(--color-text-secondary);font-size:12px">คลิกโหนดในแผนที่เพื่อดูรายละเอียด</div>';
+  }
+  draw();
+};
+
+function toggleRun(){
+  running=!running;
+  let btn=document.getElementById('btnRun');
+  btn.textContent=running?'หยุด':'Auto Run';
+  btn.className=running?'danger':'primary';
+  if(running) runLoop();
+  else{clearTimeout(timer);}
+}
+
+function runLoop(){
+  if(!running) return;
+  step();
+  let delay=Math.max(50,600-speed*55);
+  timer=setTimeout(runLoop,delay);
+}
+
+function setSpeed(v){
+  speed=parseInt(v);
+  document.getElementById('speedLbl').textContent=v+'x';
+}
+
+// แก้ไขฟังก์ชันรีเซ็ตให้ไปดึงข้อมูลแผนที่จริงจาก Python
+async function resetSim(){
+  running=false; clearTimeout(timer);
+  document.getElementById('btnRun').textContent='Auto Run';
+  document.getElementById('btnRun').className='primary';
+  
+  log('กำลังโหลดแผนที่จาก AI จริง...', 'warn');
+  const res = await fetch('/api/step');
+  const data = await res.json();
+  
+  // 💡 เพิ่มบรรทัดนี้: อัปเดตพิกัดและเส้นประให้ตรงกับที่ Python ขยับ
+  nodes = data.positions.map((p, i) => ({x: p[0], y: p[1], id: i}));
+  adj = data.adj;
+  channels = data.channels;
+  
+  qTable=Array.from({length:N},()=>Array(C).fill(0));
+  eps=0; // ปิด Epsilon เพราะเราใช้โมเดลเทรนเสร็จแล้ว
+  episode=0; stepNum=0; totalReward=0; rewardCount=0;
+  selectedNode=-1;
+  
+  draw();
+  document.getElementById('logBox').innerHTML='';
+  document.getElementById('nodeDetail').innerHTML='<div style="color:var(--color-text-secondary);font-size:12px">คลิกโหนดในแผนที่เพื่อดูรายละเอียด</div>';
+  updateStats(0,0);
+  setFlowStep(-1);
+  log('✅ เชื่อมต่อโมเดล PyTorch สำเร็จแล้ว!', 'ok');
+}
+
+// แก้ไขฟังก์ชัน Step ให้ไปถาม Q-Value จาก Python
+async function step(){
+  if(stepNum===0 && nodes.length===0) await resetSim();
+  
+  setFlowStep(0); setFlowStep(1); setFlowStep(2); setFlowStep(3);
+  
+  // เรียก API ไปถาม AI ตัวจริง
+  const res = await fetch('/api/step');
+  const data = await res.json();
+  
+  setFlowStep(4); setFlowStep(5);
+  
+  // อัปเดต UI จากผลลัพธ์ของ AI จริง
+  let actions = data.actions;
+  qTable = data.q_values;
+  let ci = data.ci_list;
+  let rewards = data.rewards;
+  let avgCI = data.avg_ci;
+  
+  let avgR = rewards.reduce((a,b)=>a+b,0)/N;
+  totalReward+=avgR; rewardCount++;
+  
+  channels=[...actions];
+  stepNum++;
+  
+  // อัปเดต Log
+  let bad=ci.filter(v=>v>0).length;
+  if(bad>0) log(`Step ${stepNum}: โหนดชนกัน ${bad} ตัว | CI เฉลี่ย=${avgCI.toFixed(2)}`,'warn');
+  else log(`Step ${stepNum}: AI จัดการแก้ปัญหาชนกันได้ 100% 🚀`,'ok');
+
+  updateStats(avgR, avgCI);
+  draw();
+  if(selectedNode>=0) showNodeDetail(selectedNode);
+  document.getElementById('epLbl').textContent=`Real Model | Step ${stepNum}`;
+  setFlowStep(6);
+}
+
+// สั่งให้โหลดแผนที่จริงทันทีที่เปิดเว็บ
+resetSim();
+
+function randomize(){
+  resetSim();
+}
+
+const canvas=document.getElementById('net');
+initNodes(); draw();
+updateStats(0,0);
+log('พร้อมแล้ว — กด Step หรือ Auto Run เพื่อเริ่มจำลอง');
+</script>
