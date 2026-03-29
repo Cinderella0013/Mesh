@@ -42,8 +42,8 @@ input[type=range]{flex:1;max-width:100px}
   border-radius: 8px;
   display: block;
   /* 💡 ล็อกขนาดคงที่ไว้ ไม่ให้มันขยายเอง */
-  width: 500px !important; 
-  height: 400px !important;
+  width: 800px !important; 
+  height: 500px !important;
 }
 </style>
 
@@ -145,6 +145,7 @@ const CH_DARK=['#0C447C','#085041','#633806','#791F1F'];
 let nodes=[], adj=[], channels=[], qTable=[], eps=1.0;
 let episode=0, stepNum=0, running=false, timer=null, speed=4;
 let selectedNode=-1, totalReward=0, rewardCount=0;
+let globalStep = 0;
 
 function initNodes(){
   nodes=[];
@@ -351,8 +352,8 @@ function draw() {
 
   const ctx = canvas.getContext('2d');
   const dpr = window.devicePixelRatio || 1;
-  const logicalWidth = 500;
-  const logicalHeight = 400;
+  const logicalWidth = 800;
+  const logicalHeight = 500;
 
   canvas.width = logicalWidth * dpr;
   canvas.height = logicalHeight * dpr;
@@ -466,7 +467,7 @@ async function resetSim(){
   document.getElementById('btnRun').className='primary';
   
   log('กำลังโหลดแผนที่จาก AI จริง...', 'warn');
-  const res = await fetch('/api/step');
+  const res = await fetch('/api/reset');
   const data = await res.json();
   
   // 💡 เพิ่มบรรทัดนี้: อัปเดตพิกัดและเส้นประให้ตรงกับที่ Python ขยับ
@@ -490,8 +491,21 @@ async function resetSim(){
 // แก้ไขฟังก์ชัน Step ให้ไปถาม Q-Value จาก Python
 async function step(){
   if(stepNum===0 && nodes.length===0) await resetSim();
-  
   setFlowStep(0); setFlowStep(1); setFlowStep(2); setFlowStep(3);
+
+  globalStep++;
+if(globalStep % 20 === 0){
+    log(`🌐 สภาพแวดล้อมเปลี่ยน! AI กำลังปรับตัว...`, 'warn');
+    const rres = await fetch('/api/shift_positions');  // ✅ ขยับ ไม่ reset
+    const rdata = await rres.json();
+    nodes = rdata.positions.map((p, i) => ({x: p[0], y: p[1], id: i}));
+    adj = rdata.adj;
+    channels = rdata.channels;
+    // ✅ ไม่ reset episode, stepNum, qTable, eps — AI ทำงานต่อเนื่อง
+    draw();
+    // ไม่ return! วิ่งต่อเข้า /api/step ทันที ให้ AI ตอบสนองทันที
+}
+
   
   // เรียก API ไปถาม AI ตัวจริง
   const res = await fetch('/api/step');
@@ -515,7 +529,7 @@ async function step(){
   // อัปเดต Log
   let bad=ci.filter(v=>v>0).length;
   if(bad>0) log(`Step ${stepNum}: โหนดชนกัน ${bad} ตัว | CI เฉลี่ย=${avgCI.toFixed(2)}`,'warn');
-  else log(`Step ${stepNum}: AI จัดการแก้ปัญหาชนกันได้ 100% 🚀`,'ok');
+  else log(`Step ${stepNum}: AI จัดการแก้ปัญหาชนกันได้`,'ok');
 
   updateStats(avgR, avgCI);
   draw();
@@ -527,12 +541,31 @@ async function step(){
 // สั่งให้โหลดแผนที่จริงทันทีที่เปิดเว็บ
 resetSim();
 
-function randomize(){
-  resetSim();
+async function randomize(){
+    running=false; clearTimeout(timer);
+    document.getElementById('btnRun').textContent='Auto Run';
+    document.getElementById('btnRun').className='primary';
+    log('กำลังสุ่มตำแหน่งโหนดใหม่...', 'warn');
+    
+    const res = await fetch('/api/randomize');  // ✅ เรียก endpoint ใหม่
+    const data = await res.json();
+    
+    nodes = data.positions.map((p, i) => ({x: p[0], y: p[1], id: i}));
+    adj = data.adj;
+    channels = data.channels;
+    qTable = Array.from({length:N},()=>Array(C).fill(0));
+    eps = 1.0;
+    episode=0; stepNum=0; totalReward=0; rewardCount=0;
+    selectedNode=-1;
+    draw();
+    document.getElementById('logBox').innerHTML='';
+    document.getElementById('nodeDetail').innerHTML='<div style="color:var(--color-text-secondary);font-size:12px">คลิกโหนดในแผนที่เพื่อดูรายละเอียด</div>';
+    updateStats(0,0);
+    log('สุ่มตำแหน่งโหนดใหม่เรียบร้อย!', 'ok');
 }
 
 const canvas=document.getElementById('net');
 initNodes(); draw();
 updateStats(0,0);
-log('พร้อมแล้ว — กด Step หรือ Auto Run เพื่อเริ่มจำลอง');
+log('พร้อมแล้ว');
 </script>
