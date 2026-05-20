@@ -31,7 +31,6 @@ print("Starting Training...")
 state = env.reset()
 
 for ep in range(episodes):
-    # รีเซ็ตสภาพแวดล้อมใหม่ทุกรอบที่เริ่มเกม!
     state = env.reset() 
     ep_reward = 0
     ep_interference = 0
@@ -56,7 +55,7 @@ for ep in range(episodes):
             next_q_values = model(next_state, env.adj)
             max_next_q = torch.max(next_q_values, dim=1)[0]
         
-        # เป้าหมายต้องถูก detach() เสมอ เพื่อไม่ให้ PyTorch เอาไปคิดย้อนกลับ
+  
         targets = q_values.clone().detach()
         for i in range(num_nodes):
             # Q_target = Reward + (Discount * Max_Next_Q)

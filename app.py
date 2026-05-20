@@ -58,7 +58,7 @@ def randomize():
 def shift_positions():
     global current_state
     # ขยับพิกัดแบบ random walk เล็กน้อย (จำลอง dynamic environment)
-    noise = np.random.uniform(-10, 10, env.node_pos.shape)
+    noise = np.random.uniform(-30, 30, env.node_pos.shape)
     env.node_pos = np.clip(env.node_pos + noise, 0, 150)
     
     # สร้าง adjacency ใหม่จากพิกัดที่ขยับแล้ว
