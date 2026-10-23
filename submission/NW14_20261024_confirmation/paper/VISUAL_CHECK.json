@@ -1,0 +1,38 @@
+{
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "status": "PASS",
+  "all_pages_viewed_at_original_resolution": true,
+  "check": [
+    "Thai and English glyphs",
+    "four native equations",
+    "six unchanged tables",
+    "original scientific plot",
+    "footers 1\u201312",
+    "no clipping or overlapping text",
+    "title unchanged",
+    "all OOXML explicit fonts TH Sarabun New",
+    "all OOXML text color 000000"
+  ],
+  "font_names": [
+    "TH Sarabun New"
+  ],
+  "text_colors": [
+    "000000"
+  ],
+  "docx_sha256": "01b82452f0b4de5d488e8268d14ac870fa9c61b19cc5b3745a620766f56f25f9",
+  "pdf_sha256": "2891bd231c03deb5e8cd2aaf79a9fb9d90b67a9cd8ed8b5dee5314438256c708",
+  "layout": "Original section and column structure retained; no venue template selected."
+}

@@ -1,0 +1,862 @@
+{
+  "status": "PASS",
+  "methods": {
+    "actuation_hybrid": {
+      "epochs": 780,
+      "node_choices": 11700,
+      "runs": 60
+    },
+    "actuation_qneutral": {
+      "epochs": 780,
+      "node_choices": 11700,
+      "runs": 60
+    }
+  },
+  "issues": [],
+  "max_pressure_update_error": 0.0,
+  "source": "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\bfs_raw_20261016_recovery1\\runtime\\attempts\\final_seed9795002_mobility24_selected_hybrid\\native\\policy\\sources\\candidate_sources\\raes.py",
+  "source_sha256": "cfea06e17708e74422fc35606d1a2fd1c88c1078d3de04c7d03427bbeae1854a",
+  "cases": [
+    {
+      "method": "actuation_hybrid",
+      "condition": "mobility",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "mobility",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "mobility",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "mobility",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "mobility",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "mobility",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "mobility",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "mobility",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "mobility",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "mobility",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "hidden_node",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "hidden_node",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "hidden_node",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "hidden_node",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "hidden_node",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "hidden_node",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "hidden_node",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "hidden_node",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "hidden_node",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "hidden_node",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "burst",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "burst",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "burst",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "burst",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "burst",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "burst",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "burst",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "burst",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "burst",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "burst",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "adjacent_channel",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "adjacent_channel",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "adjacent_channel",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "adjacent_channel",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "adjacent_channel",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "adjacent_channel",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "adjacent_channel",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "adjacent_channel",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "adjacent_channel",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "adjacent_channel",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "combined",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "combined",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "combined",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "combined",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "combined",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "combined",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "combined",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "combined",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "combined",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "combined",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "normal",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "normal",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "normal",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "normal",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "normal",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "normal",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "normal",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "normal",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "normal",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_hybrid",
+      "condition": "normal",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "mobility",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "mobility",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "mobility",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "mobility",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "mobility",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "mobility",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "mobility",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "mobility",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "mobility",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "mobility",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "hidden_node",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "hidden_node",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "hidden_node",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "hidden_node",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "hidden_node",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "hidden_node",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "hidden_node",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "hidden_node",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "hidden_node",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "hidden_node",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "burst",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "burst",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "burst",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "burst",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "burst",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "burst",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "burst",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "burst",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "burst",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "burst",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "adjacent_channel",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "adjacent_channel",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "adjacent_channel",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "adjacent_channel",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "adjacent_channel",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "adjacent_channel",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "adjacent_channel",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "adjacent_channel",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "adjacent_channel",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "adjacent_channel",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "combined",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "combined",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "combined",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "combined",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "combined",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "combined",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "combined",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "combined",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "combined",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "combined",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "normal",
+      "load": "8",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "normal",
+      "load": "8",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "normal",
+      "load": "12",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "normal",
+      "load": "12",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "normal",
+      "load": "16",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "normal",
+      "load": "16",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "normal",
+      "load": "20",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "normal",
+      "load": "20",
+      "seed": "9795003",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "normal",
+      "load": "24",
+      "seed": "9795002",
+      "epochs": 13
+    },
+    {
+      "method": "actuation_qneutral",
+      "condition": "normal",
+      "load": "24",
+      "seed": "9795003",
+      "epochs": 13
+    }
+  ],
+  "scope": "Actual frozen plan invoked on every retained Hybrid and Q-neutral epoch, using recorded Q and causal snapshot-derived coupling/current/load; gate reconstructed from previous intended/current actions. Graph/order/action/all choice flags and reserve pressure checked. No new model inference or native execution."
+}

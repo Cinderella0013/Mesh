@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "relocated_directory": "D:\\Claude-workspace\\v12R_confirmation_20261023\\relocation_check\\snapshot",
+  "public_manifest_files_verified": 28,
+  "commands": [
+    {
+      "command": "python portable_replay/test_exact_planner.py",
+      "exit_code": 0,
+      "log": "relocation_check\\command_1.log"
+    },
+    {
+      "command": "python portable_replay/replay_exact_retained.py",
+      "exit_code": 0,
+      "log": "relocation_check\\command_2.log"
+    },
+    {
+      "command": "python q/test_q_margins.py",
+      "exit_code": 0,
+      "log": "relocation_check\\command_3.log"
+    },
+    {
+      "command": "python q/q_margins.py --registry portable_replay/REGISTRY_120.csv",
+      "exit_code": 0,
+      "log": "relocation_check\\command_4.log"
+    },
+    {
+      "command": "python gate/audit_gate.py --registry portable_replay/REGISTRY_120.csv --source-dir native_source",
+      "exit_code": 0,
+      "log": "relocation_check\\command_5.log"
+    }
+  ],
+  "q_result_exact": true,
+  "gate_counts_exact": true,
+  "new_native_runs": 0,
+  "training_runs": 0,
+  "builds": 0
+}

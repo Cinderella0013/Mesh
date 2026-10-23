@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "matching_hybrid_runs": 60,
+  "matching_input_files": 420,
+  "node_epochs": 11700,
+  "held_cases": 1301,
+  "portable_registry": "D:\\Claude-workspace\\v12R_confirmation_20261023\\portable_replay\\REGISTRY_120.csv",
+  "portable_registry_sha256": "67d7cbfc2fa99f42e4d031c80791b6f371a6997b968e6a1bc17a0acea21bd4e3",
+  "counts_equal": true,
+  "input_bytes_and_sha256_equal": true
+}

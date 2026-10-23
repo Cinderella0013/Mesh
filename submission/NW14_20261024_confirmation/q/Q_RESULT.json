@@ -1,0 +1,43 @@
+{
+  "status": "PASS_FROZEN_STATE_READBACK",
+  "source_sha256": "cfea06e17708e74422fc35606d1a2fd1c88c1078d3de04c7d03427bbeae1854a",
+  "runs": 60,
+  "epochs": 780,
+  "summary": {
+    "all_six_conditions": {
+      "node_choices": 11700,
+      "local_q_changed_final_nodes": 165,
+      "fixed_epoch_q_changed_final_nodes": 243,
+      "pre_gate_q_changed_nodes": 210,
+      "gate_blocked": 1301,
+      "empty_mask": 1803,
+      "actual_switched_with_current_allowed": 1063
+    },
+    "primary_five_stress": {
+      "node_choices": 9750,
+      "local_q_changed_final_nodes": 138,
+      "fixed_epoch_q_changed_final_nodes": 220,
+      "pre_gate_q_changed_nodes": 175,
+      "gate_blocked": 1194,
+      "empty_mask": 1776,
+      "actual_switched_with_current_allowed": 1001
+    },
+    "normal_reference": {
+      "node_choices": 1950,
+      "local_q_changed_final_nodes": 27,
+      "fixed_epoch_q_changed_final_nodes": 23,
+      "pre_gate_q_changed_nodes": 35,
+      "gate_blocked": 107,
+      "empty_mask": 27,
+      "actual_switched_with_current_allowed": 62
+    }
+  },
+  "counterfactual_service_scores_computed": false,
+  "new_native_runs": 0,
+  "new_inference_or_training": false,
+  "limits": [
+    "Local Q effect holds the actual reservation prefix fixed. Epoch counterfactual allows a different prefix within that one frozen observation. Neither feeds changes into later native observations.",
+    "Changed decisions are not proof of better SAT, fairness, delay or learning generalization.",
+    "The 60 known historical runs include a separate Normal reference; two seeds do not constitute independent generalization."
+  ]
+}

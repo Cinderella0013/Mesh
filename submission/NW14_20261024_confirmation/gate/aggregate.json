@@ -1,0 +1,1473 @@
+{
+  "method": "actuation_hybrid",
+  "registry": "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\submission_package_20261015\\current_results_20261016\\ALL660_PER_SEED.csv",
+  "registry_sha256": "1de30241e0e9d9403474b92a8afa12692c9bc82331f6893c30169ea22b3344d2",
+  "run_count": 60,
+  "node_epochs": 11700,
+  "held_cases": 1301,
+  "counts": {
+    "status_OK": 10255,
+    "management_enqueue": 35100,
+    "management_tx": 35100,
+    "management_rx": 35100,
+    "state_report_complete": 780,
+    "state_command_submitted": 780,
+    "state_ack_partial": 11700,
+    "state_ack_complete": 780,
+    "status_REJECTED": 1310,
+    "held_previous_REJECTED": 1251,
+    "status_STALE": 135,
+    "held_previous_STALE": 50
+  },
+  "runs": [
+    {
+      "run_id": "mobility/8/9795002",
+      "condition": "mobility",
+      "load_mbps_per_sta": "8",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "mobility/8/9795003",
+      "condition": "mobility",
+      "load_mbps_per_sta": "8",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "mobility/12/9795002",
+      "condition": "mobility",
+      "load_mbps_per_sta": "12",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 38,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "mobility/12/9795003",
+      "condition": "mobility",
+      "load_mbps_per_sta": "12",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 38,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "mobility/16/9795002",
+      "condition": "mobility",
+      "load_mbps_per_sta": "16",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 63,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "mobility/16/9795003",
+      "condition": "mobility",
+      "load_mbps_per_sta": "16",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 58,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "mobility/20/9795002",
+      "condition": "mobility",
+      "load_mbps_per_sta": "20",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 61,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "mobility/20/9795003",
+      "condition": "mobility",
+      "load_mbps_per_sta": "20",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 53,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "mobility/24/9795002",
+      "condition": "mobility",
+      "load_mbps_per_sta": "24",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 55,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "mobility/24/9795003",
+      "condition": "mobility",
+      "load_mbps_per_sta": "24",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 55,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "hidden_node/8/9795002",
+      "condition": "hidden_node",
+      "load_mbps_per_sta": "8",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "hidden_node/8/9795003",
+      "condition": "hidden_node",
+      "load_mbps_per_sta": "8",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "hidden_node/12/9795002",
+      "condition": "hidden_node",
+      "load_mbps_per_sta": "12",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 12,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "hidden_node/12/9795003",
+      "condition": "hidden_node",
+      "load_mbps_per_sta": "12",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 6,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "hidden_node/16/9795002",
+      "condition": "hidden_node",
+      "load_mbps_per_sta": "16",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 18,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "hidden_node/16/9795003",
+      "condition": "hidden_node",
+      "load_mbps_per_sta": "16",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 18,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "hidden_node/20/9795002",
+      "condition": "hidden_node",
+      "load_mbps_per_sta": "20",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 13,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "hidden_node/20/9795003",
+      "condition": "hidden_node",
+      "load_mbps_per_sta": "20",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 14,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "hidden_node/24/9795002",
+      "condition": "hidden_node",
+      "load_mbps_per_sta": "24",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 13,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "hidden_node/24/9795003",
+      "condition": "hidden_node",
+      "load_mbps_per_sta": "24",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 13,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "burst/8/9795002",
+      "condition": "burst",
+      "load_mbps_per_sta": "8",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "burst/8/9795003",
+      "condition": "burst",
+      "load_mbps_per_sta": "8",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "burst/12/9795002",
+      "condition": "burst",
+      "load_mbps_per_sta": "12",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 6,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "burst/12/9795003",
+      "condition": "burst",
+      "load_mbps_per_sta": "12",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 6,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "burst/16/9795002",
+      "condition": "burst",
+      "load_mbps_per_sta": "16",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 11,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "burst/16/9795003",
+      "condition": "burst",
+      "load_mbps_per_sta": "16",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 11,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "burst/20/9795002",
+      "condition": "burst",
+      "load_mbps_per_sta": "20",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "burst/20/9795003",
+      "condition": "burst",
+      "load_mbps_per_sta": "20",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "burst/24/9795002",
+      "condition": "burst",
+      "load_mbps_per_sta": "24",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 6,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "burst/24/9795003",
+      "condition": "burst",
+      "load_mbps_per_sta": "24",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 6,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "adjacent_channel/8/9795002",
+      "condition": "adjacent_channel",
+      "load_mbps_per_sta": "8",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "adjacent_channel/8/9795003",
+      "condition": "adjacent_channel",
+      "load_mbps_per_sta": "8",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "adjacent_channel/12/9795002",
+      "condition": "adjacent_channel",
+      "load_mbps_per_sta": "12",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 6,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "adjacent_channel/12/9795003",
+      "condition": "adjacent_channel",
+      "load_mbps_per_sta": "12",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 6,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "adjacent_channel/16/9795002",
+      "condition": "adjacent_channel",
+      "load_mbps_per_sta": "16",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 30,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "adjacent_channel/16/9795003",
+      "condition": "adjacent_channel",
+      "load_mbps_per_sta": "16",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 11,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "adjacent_channel/20/9795002",
+      "condition": "adjacent_channel",
+      "load_mbps_per_sta": "20",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "adjacent_channel/20/9795003",
+      "condition": "adjacent_channel",
+      "load_mbps_per_sta": "20",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "adjacent_channel/24/9795002",
+      "condition": "adjacent_channel",
+      "load_mbps_per_sta": "24",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 19,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "adjacent_channel/24/9795003",
+      "condition": "adjacent_channel",
+      "load_mbps_per_sta": "24",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 19,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "combined/8/9795002",
+      "condition": "combined",
+      "load_mbps_per_sta": "8",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 2,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "combined/8/9795003",
+      "condition": "combined",
+      "load_mbps_per_sta": "8",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 2,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "combined/12/9795002",
+      "condition": "combined",
+      "load_mbps_per_sta": "12",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 63,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "combined/12/9795003",
+      "condition": "combined",
+      "load_mbps_per_sta": "12",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 62,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "combined/16/9795002",
+      "condition": "combined",
+      "load_mbps_per_sta": "16",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 64,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "combined/16/9795003",
+      "condition": "combined",
+      "load_mbps_per_sta": "16",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 64,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "combined/20/9795002",
+      "condition": "combined",
+      "load_mbps_per_sta": "20",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 65,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "combined/20/9795003",
+      "condition": "combined",
+      "load_mbps_per_sta": "20",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 65,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "combined/24/9795002",
+      "condition": "combined",
+      "load_mbps_per_sta": "24",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 71,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "combined/24/9795003",
+      "condition": "combined",
+      "load_mbps_per_sta": "24",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 71,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": false
+    },
+    {
+      "run_id": "normal/8/9795002",
+      "condition": "normal",
+      "load_mbps_per_sta": "8",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/8/9795003",
+      "condition": "normal",
+      "load_mbps_per_sta": "8",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/12/9795002",
+      "condition": "normal",
+      "load_mbps_per_sta": "12",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 6,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/12/9795003",
+      "condition": "normal",
+      "load_mbps_per_sta": "12",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 6,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/16/9795002",
+      "condition": "normal",
+      "load_mbps_per_sta": "16",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 11,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/16/9795003",
+      "condition": "normal",
+      "load_mbps_per_sta": "16",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 28,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/20/9795002",
+      "condition": "normal",
+      "load_mbps_per_sta": "20",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/20/9795003",
+      "condition": "normal",
+      "load_mbps_per_sta": "20",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 18,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/24/9795002",
+      "condition": "normal",
+      "load_mbps_per_sta": "24",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 19,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/24/9795003",
+      "condition": "normal",
+      "load_mbps_per_sta": "24",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 19,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    }
+  ],
+  "held_cases_by_condition": {
+    "mobility": 421,
+    "hidden_node": 107,
+    "burst": 46,
+    "adjacent_channel": 91,
+    "combined": 529,
+    "normal": 107
+  },
+  "primary_50_runs": {
+    "node_epochs": 9750,
+    "held_cases": 1194
+  },
+  "normal_reference_10_runs": {
+    "node_epochs": 1950,
+    "held_cases": 107
+  },
+  "held_current_statuses": {
+    "OK": 1255,
+    "STALE": 46
+  },
+  "held_current_controller_paths": {
+    "unchanged": 1255,
+    "": 46
+  },
+  "held_previous_ack_complete_to_observation_ns": {
+    "min": 189488900,
+    "max": 473591200
+  },
+  "abnormal_events": {
+    "state_ack_timeout": 0,
+    "state_ack_ignored": 0,
+    "management_invalid_rx": 0,
+    "management_enqueue_failed": 0
+  },
+  "unmatched_missing_duplicate_reordered_paths": 0,
+  "normal_reference_runs": [
+    {
+      "run_id": "normal/8/9795002",
+      "condition": "normal",
+      "load_mbps_per_sta": "8",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/8/9795003",
+      "condition": "normal",
+      "load_mbps_per_sta": "8",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/12/9795002",
+      "condition": "normal",
+      "load_mbps_per_sta": "12",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 6,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/12/9795003",
+      "condition": "normal",
+      "load_mbps_per_sta": "12",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 6,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/16/9795002",
+      "condition": "normal",
+      "load_mbps_per_sta": "16",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 11,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/16/9795003",
+      "condition": "normal",
+      "load_mbps_per_sta": "16",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 28,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/20/9795002",
+      "condition": "normal",
+      "load_mbps_per_sta": "20",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 0,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/20/9795003",
+      "condition": "normal",
+      "load_mbps_per_sta": "20",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 18,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/24/9795002",
+      "condition": "normal",
+      "load_mbps_per_sta": "24",
+      "seed": "9795002",
+      "node_epochs": 195,
+      "held": 19,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    },
+    {
+      "run_id": "normal/24/9795003",
+      "condition": "normal",
+      "load_mbps_per_sta": "24",
+      "seed": "9795003",
+      "node_epochs": 195,
+      "held": 19,
+      "management_events": {
+        "enqueue": 585,
+        "tx": 585,
+        "rx": 585
+      },
+      "state_events": {
+        "report_complete": 13,
+        "command_submitted": 13,
+        "ack_partial": 195,
+        "ack_complete": 13
+      },
+      "normal_reference": true
+    }
+  ],
+  "source_commit": "f5921db0d72edc70e0c6a5163d4f669ed8eb43c5",
+  "source_diff": "none",
+  "selfchecks": "PASS; identity duplicates, kind namespace, six-significant-digit intervals",
+  "assertions": "PASS; every input request has unique REPORT/COMMAND/ACK enqueue-tx-rx identity; exact timing and channel cross-check; complete controller paths; no overlapping pending interval; held previous terminal precedes observation; no same-request switching after rejection/hold",
+  "limitations": [
+    "Recorded paths for these 60 Hybrid runs only; no universal runtime or hardware guarantee.",
+    "Channel-control timeS has six significant digits. Exact terminal time is ACK stamp/enqueue under synchronous source callback; trace match uses rounding intervals.",
+    "Scan/calibration retunes have separate namespaces and are not permanent policy requests. Channel-control does not emit each scan retune; this audit makes no claim that the radio never retunes after a rejected policy request.",
+    "STALE itself does not cancel an older actuator. No older pending policy interval at held observation is established independently from complete controller paths.",
+    "Coordinator timeout itself does not cancel actuator work. These records contain no timeout/ignored/incomplete path; unrecorded or alternate timeout paths remain unproven.",
+    "No simulator rerun, no scientific code edits, no fixed gate implementation, no new SAT improvement claim; packet metrics reused without recomputation."
+  ]
+}

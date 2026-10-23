@@ -1,0 +1,93 @@
+{
+  "wifi_threeway.cc": {
+    "path": "C:\\Users\\qoqao\\.codex\\worktrees\\advisor-share\\Claude-workspace\\submission\\NW14_20261023\\project\\source\\native_build\\wifi_threeway.cc",
+    "working_sha256": "4b31d60c33c8a8b7f59ec5932e5280439ecc4d0246068a627342f12b7df31cd5",
+    "commit_blob_sha256": "4b31d60c33c8a8b7f59ec5932e5280439ecc4d0246068a627342f12b7df31cd5",
+    "normalized_sha256": "f2a9931df94d7ef08357c343381d59776057fce2713c886af554f614139bdb9e",
+    "normalized_equal_to_commit": true,
+    "lines": [
+      {
+        "start": 928,
+        "end": 939,
+        "meaning": "Execute; BUSY and unchanged paths"
+      },
+      {
+        "start": 985,
+        "end": 990,
+        "meaning": "scan asserts no pending permanent action"
+      },
+      {
+        "start": 1060,
+        "end": 1070,
+        "meaning": "ScanRetune is a separate acquisition action"
+      },
+      {
+        "start": 1142,
+        "end": 1156,
+        "meaning": "Begin creates one pending request"
+      },
+      {
+        "start": 1159,
+        "end": 1181,
+        "meaning": "Poll quiescence branch sets channels, schedules Finish, then returns"
+      },
+      {
+        "start": 1183,
+        "end": 1196,
+        "meaning": "Poll deadline rejection resumes source, clears pending, completes REJECTED"
+      },
+      {
+        "start": 1200,
+        "end": 1226,
+        "meaning": "FinishSwitch requires pending and readback; clears pending and completes OK"
+      },
+      {
+        "start": 1226,
+        "end": 1232,
+        "meaning": "scan queue namespace offset and completion callback"
+      }
+    ]
+  },
+  "management_link.h": {
+    "path": "C:\\Users\\qoqao\\.codex\\worktrees\\advisor-share\\Claude-workspace\\submission\\NW14_20261023\\project\\source\\native_build\\management_link.h",
+    "working_sha256": "4dc8e3a7f7b4b68955c9cda7531a1a3e77f11128fc84b316416c28c06637fbd6",
+    "commit_blob_sha256": "4dc8e3a7f7b4b68955c9cda7531a1a3e77f11128fc84b316416c28c06637fbd6",
+    "normalized_sha256": "4dc8e3a7f7b4b68955c9cda7531a1a3e77f11128fc84b316416c28c06637fbd6",
+    "normalized_equal_to_commit": true,
+    "lines": [
+      {
+        "start": 17,
+        "end": 18,
+        "meaning": "protocol kind and status namespaces"
+      },
+      {
+        "start": 105,
+        "end": 115,
+        "meaning": "rx trace precedes synchronous endpoint/coordinator callback"
+      },
+      {
+        "start": 151,
+        "end": 163,
+        "meaning": "Submit sends all targets; 250ms coordinator timeout"
+      },
+      {
+        "start": 176,
+        "end": 185,
+        "meaning": "ACK matching and ack_complete"
+      },
+      {
+        "start": 188,
+        "end": 201,
+        "meaning": "Endpoint rejects STALE before actuator; BUSY guard; synchronous ACK readback"
+      },
+      {
+        "start": 203,
+        "end": 205,
+        "meaning": "Timeout clears coordinator state; does not cancel actuator"
+      }
+    ]
+  },
+  "commit": "f5921db0d72edc70e0c6a5163d4f669ed8eb43c5",
+  "git_diff": "",
+  "comparison": "pinned normalized source SHA256; default source additionally checked with git diff"
+}

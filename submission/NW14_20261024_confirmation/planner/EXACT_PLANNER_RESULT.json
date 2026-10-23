@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "tests_run": 18,
+  "failures": 0,
+  "errors": 0,
+  "source": "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\bfs_raw_20261016_recovery1\\runtime\\attempts\\final_seed9795002_mobility24_selected_hybrid\\native\\policy\\sources\\candidate_sources\\raes.py",
+  "source_sha256": "cfea06e17708e74422fc35606d1a2fd1c88c1078d3de04c7d03427bbeae1854a",
+  "scope": "Actual archived pure RAES plan calls; no native actuator or trained GAT inference executed."
+}

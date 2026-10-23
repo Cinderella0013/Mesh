@@ -1,0 +1,130 @@
+{
+  ".gitattributes": {
+    "bytes": 9,
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  "ENVIRONMENT.json": {
+    "bytes": 192,
+    "sha256": "454d9b1c9604c440885a0a251cf74d2d2abfb811a4fead4fd65ab97d7162957a"
+  },
+  "FOCUSED_REVIEW.json": {
+    "bytes": 788,
+    "sha256": "66c8487de60dbf4377123d14fc306d9c13a1a62ed6a86e8e6eb5fa3f6a2a5b0e"
+  },
+  "gate/aggregate.json": {
+    "bytes": 37281,
+    "sha256": "8acbcc2035c7f916aec21e38e69dc0067fbd199fe254d9649c6a2eed0126ae80"
+  },
+  "gate/audit_gate.py": {
+    "bytes": 20054,
+    "sha256": "92f21c7dc4d8229ee92507f485e2b0f6e5d6a448b6c3e82bb783f469594269c9"
+  },
+  "gate/FINDINGS_TH.md": {
+    "bytes": 6687,
+    "sha256": "1f292eaa22151c07dc380b7a28085b7b03d7a7d53d16388d114754dd53b2379f"
+  },
+  "gate/held_cases.csv": {
+    "bytes": 906904,
+    "sha256": "a749b3df78697ba80123a55ea665bebab1a328e7e19fa92eca1d55b0649ddd50"
+  },
+  "gate/input_hashes.csv": {
+    "bytes": 115208,
+    "sha256": "066bdce3f0808db348a46eb8cb3da6648bdc5eb277273d6027f1c4ef60f6c7b7"
+  },
+  "gate/node_epoch_requests.csv": {
+    "bytes": 6012981,
+    "sha256": "7d53a6537c6155eec8f2fe70d6340b1423ae6171857fc4c69f2e4db3e1b9d2da"
+  },
+  "gate/portability_verification.json": {
+    "bytes": 411,
+    "sha256": "a72b3126f62f35cb59bd4568b48adb68db8d8f96cb2739d338b82922e328d16d"
+  },
+  "gate/source_hash_line_map.json": {
+    "bytes": 3193,
+    "sha256": "43ef9e84e1c48b980ddec0d07c0bbf8cf6413b512f1e369e38c421d819ad2e1f"
+  },
+  "native_source/management_link.h": {
+    "bytes": 12268,
+    "sha256": "4dc8e3a7f7b4b68955c9cda7531a1a3e77f11128fc84b316416c28c06637fbd6"
+  },
+  "native_source/wifi_threeway.cc": {
+    "bytes": 112326,
+    "sha256": "4b31d60c33c8a8b7f59ec5932e5280439ecc4d0246068a627342f12b7df31cd5"
+  },
+  "paper/CONTENT_VERIFICATION.json": {
+    "bytes": 554,
+    "sha256": "510d5ea95f939670e290f2ace489600337522f842924129ffbf2979bfadf9ca2"
+  },
+  "paper/Research_Paper_GAT_MARL_ยืนยันหลักฐาน_20261024.docx": {
+    "bytes": 87773,
+    "sha256": "01b82452f0b4de5d488e8268d14ac870fa9c61b19cc5b3745a620766f56f25f9"
+  },
+  "paper/Research_Paper_GAT_MARL_ยืนยันหลักฐาน_20261024.pdf": {
+    "bytes": 384075,
+    "sha256": "2891bd231c03deb5e8cd2aaf79a9fb9d90b67a9cd8ed8b5dee5314438256c708"
+  },
+  "paper/VISUAL_CHECK.json": {
+    "bytes": 873,
+    "sha256": "e4e1a75c56a51ea9c8bc8ddd3ee4229036ea2eb234cd243d7b2a003643ed7c0b"
+  },
+  "planner/EXACT_PLANNER_RESULT.json": {
+    "bytes": 500,
+    "sha256": "98d749294d9970f856830ad083624c517ef4a31dc2e93eaadaf8999b11a5c5bd"
+  },
+  "planner/EXACT_REPLAY_INPUT_SHA256.json": {
+    "bytes": 96164,
+    "sha256": "e683e368fe295c7a2e25d404d41780a544e30ff4a25f472dac9ad0d57f9ae499"
+  },
+  "planner/EXACT_REPLAY_RESULT.json": {
+    "bytes": 19306,
+    "sha256": "60aacd82f86edc4fa70681fc8cf017a2ab6bce6b6c67e89f80aad9582f2f165e"
+  },
+  "planner/source/raes.py": {
+    "bytes": 5662,
+    "sha256": "cfea06e17708e74422fc35606d1a2fd1c88c1078d3de04c7d03427bbeae1854a"
+  },
+  "q/Q_EPOCH_780.csv": {
+    "bytes": 37524,
+    "sha256": "0f52493a910408d5d152abefe18783179a1cad009032e09970981f3b837b82d7"
+  },
+  "q/Q_INPUT_SHA256.json": {
+    "bytes": 26350,
+    "sha256": "98a578c8dcc1a54ea8da8da64c00ef1222127a394fdc4002ca017a0098685f8e"
+  },
+  "q/q_margins.py": {
+    "bytes": 8795,
+    "sha256": "d43270f9b7b4adb39d8febee5294270dfbf680ccbfe150b19194cf8f60633ca0"
+  },
+  "q/Q_NODE_MARGINS_11700.csv": {
+    "bytes": 4672405,
+    "sha256": "fe6b367c1938c395067a2286e245ac4b5f8767032e8800fe2bf09058ba63e1ee"
+  },
+  "q/Q_RESULT.json": {
+    "bytes": 1668,
+    "sha256": "3efce50abe98bb2bfc678ca5f7ea53ac54a5910f235639d93b7ee8186d616dac"
+  },
+  "q/Q_RUNS_60.csv": {
+    "bytes": 2247,
+    "sha256": "91e031c59821f88bf230947821428ac4258d7550d17969b1411acc316cd0dff0"
+  },
+  "q/test_q_margins.py": {
+    "bytes": 2044,
+    "sha256": "30309c38393645bbfdf95db5502c58455bff6e15e73a992000e0ae58deceae7b"
+  },
+  "README.md": {
+    "bytes": 3888,
+    "sha256": "60b70983aece54245692c981a41bec922d85c1718cbedc194e4a0ee6236833d0"
+  },
+  "RELOCATION_VERIFICATION.json": {
+    "bytes": 1134,
+    "sha256": "231f93ebe4ae7dee52f106c6ede8681c3ad27380ee6a2a5b01cb5f7d07520452"
+  },
+  "REPORT_TH.md": {
+    "bytes": 7115,
+    "sha256": "fd3f7e3b1045f5a8d657f67783689562b94f1440c8cf72a402fc72a651d7e90c"
+  },
+  "retained_inputs_120.zip": {
+    "bytes": 9112077,
+    "sha256": "5b79a6f5fa500f875e782d0fc454b25f0f76fef770c5b95c776f31a76ca6108f"
+  }
+}

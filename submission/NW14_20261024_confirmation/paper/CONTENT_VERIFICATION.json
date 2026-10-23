@@ -1,0 +1,16 @@
+{
+  "input_sha256": "c7662a0cd77c799160bf276f33d596879bcc6edf282159f9bd7c6e9b5832ba41",
+  "output_sha256": "01b82452f0b4de5d488e8268d14ac870fa9c61b19cc5b3745a620766f56f25f9",
+  "all_six_tables_unchanged": true,
+  "native_equation_count_preserved": 4,
+  "title_unchanged": true,
+  "original_unchanged": true,
+  "new_native_runs": 0,
+  "training_runs": 0,
+  "builds": 0,
+  "font": "TH Sarabun New",
+  "color": "000000",
+  "added_appendix": false,
+  "visual_check_pending": false,
+  "visual_check": "PASS; VISUAL_CHECK.json; all 12 pages"
+}
