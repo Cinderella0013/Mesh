@@ -1,0 +1,13 @@
+﻿method,cohort,cells,satisfaction_pct,goodput_mbps,zero_service_flows
+gat,primary_five_stress,50,35.28323913500535,58.835861333333334,17
+gat,normal_reference,10,43.93034829032829,74.39008,0
+actuation_hybrid,primary_five_stress,50,61.77261520155314,99.53173333333334,0
+actuation_hybrid,normal_reference,10,68.73529681441764,112.19989333333334,0
+actuation_qneutral,primary_five_stress,50,60.93998305176248,97.70152533333334,0
+actuation_qneutral,normal_reference,10,68.45136260430584,110.96085333333333,0
+ganet,primary_five_stress,50,31.34618940425807,49.75511466666667,1
+ganet,normal_reference,10,36.75743128758642,58.61482666666667,0
+dgn,primary_five_stress,50,27.761230599812407,42.641087999999996,13
+dgn,normal_reference,10,32.89490208734629,50.621120000000005,0
+bfs_ca_inspired,primary_five_stress,50,56.65071782292449,94.412672,0
+bfs_ca_inspired,normal_reference,10,67.9604508278084,114.27221333333334,0

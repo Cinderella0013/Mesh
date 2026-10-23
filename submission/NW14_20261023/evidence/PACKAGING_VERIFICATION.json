@@ -1,0 +1,9 @@
+{
+  "selected_cells": 360,
+  "source_files_sha256_checked": 238,
+  "all_packet_and_ap_members_match_frozen_metadata": true,
+  "all_selected_raw_members_read_to_eof_with_zip_crc_check": true,
+  "raw_members": 2520,
+  "native_or_training_started": false,
+  "metric_recomputation": "Run verify_selection.py separately; byte verification alone is not independent re-execution."
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "dgn-common-source-v1",
+  "upstream_variant": "Routing_R_RAW_PLUS_KL_LOCAL",
+  "feature_width": 11,
+  "agents": 15,
+  "neighbors": 4,
+  "actions": 4,
+  "files": {
+    "gamma.py": "419c858099ad74b5b9f41a60f9af787112f9746c644b2f715a5aa0da9cb5088f",
+    "model_definitions.py": "48e2314abb084c5dd850502f736cae6d26c3328103c9a0804404a04c5855a4ba",
+    "online_graph.py": "88ae1e38bb618fd51959c73a3c3f70215712261d591568f835b3556e3adcdacc",
+    "original_model_definitions.py": "72b4019bdcf841764d3454bc52f20bfc46712aa9757224829ff24699424e5fce",
+    "regularizer_graph.py": "ed9c78975deee1e814f3c5f8d82b7258510a5662341c6aba64bd069466af46ed",
+    "soft_update.py": "a09c31cc3dbac4c144fb449654e268edd8551fb6ba3ddf484c74c8e4c8ecd125",
+    "target_graph.py": "945daf86e5af3c26f1f7db8b897d7d57517591acc9b3e05a0521e2cb86648db0",
+    "tau.py": "1995626ceffcb638cff07d299afa0a26c65bc3665d471a4d240862dc9a3e1755",
+    "td_target.py": "cda04bc4cd39a8888c0c9661db1e93a98ab4715a0180edef1faf60c62310fdef"
+  },
+  "provenance": {
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\marl_reference_20261001\\upstream\\dgn_tf\\Routing\\routers_regularization.py": "c078c398df30db276d7a6be2d49e39926b05b4b3eb3eb10edd1cd80eb04030c5",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\dgn_routing_execution_20261003\\model_stage.py": "199211c89f72f3b8dfcc35fb21f3058daf3f0136b9632f37be08b6626db6faab",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\prepare_dgn_sources.py": "1442b7eecbffeaaf91f7057a9bbd50d23066efe1330be5f0b20d4010e7de3845"
+  }
+}

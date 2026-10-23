@@ -1,0 +1,18 @@
+{
+  "created_date": "2026-10-23",
+  "original_benchmark_sha256": "1de30241e0e9d9403474b92a8afa12692c9bc82331f6893c30169ea22b3344d2",
+  "original_benchmark_rows": 660,
+  "selected_rows": 360,
+  "selected_methods": [
+    "gat",
+    "actuation_hybrid",
+    "actuation_qneutral",
+    "ganet",
+    "dgn",
+    "bfs_ca_inspired"
+  ],
+  "selection": "Presentation scope chosen after inspecting the original 11-method results. This is not a claim to beat every evaluated method. No cells within the six selected methods were omitted.",
+  "tables": {},
+  "new_native_runs": 0,
+  "new_training_runs": 0
+}

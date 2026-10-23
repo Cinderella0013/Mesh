@@ -1,0 +1,13 @@
+{
+  "table_grid_cells": 360,
+  "per_flow_records": 5400,
+  "table_metrics_recomputed": 360,
+  "raw_packet_cells_recomputed": 0,
+  "results": [],
+  "native_runs_started": 0,
+  "limits": [
+    "Table arithmetic and supplied packet evidence are checked; this does not independently rebuild, train or rerun ns-3.",
+    "Two known seeds and post-result presentation selection do not prove statistical superiority or fresh generalization.",
+    "Delivered-only delay must be read with terminal and censored packet counts."
+  ]
+}

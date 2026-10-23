@@ -1,0 +1,205 @@
+{
+  "status": "TERMINAL",
+  "scope": "LIVE_POLICY_DEVELOPMENT_INTERFACE_ONLY",
+  "reference": "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\evidence\\integrated_resource_qualification_fdc54ccd5064\\live",
+  "reference_receipt_sha256": "970cd99f1f4b4fea3858992c2b35a36273342ce013047d8abdcfc693953f7bdc",
+  "binary_sha256": "9c5caa4adbdcc87d0d10ef032f8ce3af4022423da46f02d3cbaecc1d4b009921",
+  "native_build": "d:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\native\\builds\\869b1e644f9c01fc80af",
+  "dependency_validation": {
+    "checked": 1240,
+    "bad": [],
+    "frozen_native_sources": 15,
+    "historical_pipeline_source_sha256": "613aad76ab795c89a026cd441247cc2325d75413bc44fecc2a0ef3c50c1ac5a6",
+    "live_native_reference": "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\evidence\\integrated_resource_qualification_fdc54ccd5064\\profiled"
+  },
+  "arguments": [
+    "--numNodes=15",
+    "--numChannels=4",
+    "--scaleRateByLoad=true",
+    "--executionMode=input",
+    "--payloadSize=1200",
+    "--simTime=10",
+    "--telemetryInterval=0.7",
+    "--useV31TrafficProfile=true",
+    "--enableRtsCts=false",
+    "--enableTelemetryGuard=false",
+    "--enableCapacityPacing=false",
+    "--forceHiddenCollision=false",
+    "--enableSounding=true",
+    "--enablePacketCohort=true",
+    "--enableQueueContinuity=true",
+    "--enableAdjacentExcitation=false",
+    "--enableChannelController=true",
+    "--enablePolicyBridge=true",
+    "--channelControlSchedule=external",
+    "--requiredCpu=2",
+    "--assignment=0,2,2,1,0,3,0,3,2,2,0,1,3,1,1",
+    "--scenario=baseline",
+    "--dataRate=8Mbps",
+    "--runNumber=9710099",
+    "--positionsFile=/mnt/d/Claude-workspace/.worktrees/v33-hybrid-execution/research/advisor-v3/threeway_comparison_20261004/evidence/main_campaign_20261005_46adaca92be9/staging/gat-9701001-s09/episodes/099/collection/inputs/positionsFile.csv",
+    "--loadsFile=/mnt/d/Claude-workspace/.worktrees/v33-hybrid-execution/research/advisor-v3/threeway_comparison_20261004/evidence/main_campaign_20261005_46adaca92be9/staging/gat-9701001-s09/episodes/099/collection/inputs/loadsFile.csv",
+    "--qValuesFile=/mnt/d/Claude-workspace/.worktrees/v33-hybrid-execution/research/advisor-v3/threeway_comparison_20261004/evidence/main_campaign_20261005_46adaca92be9/staging/gat-9701001-s09/episodes/099/collection/inputs/qValuesFile.csv"
+  ],
+  "tokens": [
+    0.2681382305298651,
+    0.6878745886981488,
+    0.13675159577344143,
+    0.2579059640245144,
+    0.22112183671336283,
+    0.6967572042540666,
+    0.5304908003968082,
+    0.6585636202784872,
+    0.492415771244754,
+    0.6937940428585165,
+    0.6432286356238254,
+    0.05805901097267829,
+    0.6060570024973078,
+    0.9523300638862658,
+    0.4874888287826339
+  ],
+  "frozen_inputs": {
+    "positionsFile": {
+      "original_path": "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\evidence\\main_campaign_20261005_46adaca92be9\\staging\\gat-9701001-s09\\inputs\\099\\positions.csv",
+      "copied_path": "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\evidence\\main_campaign_20261005_46adaca92be9\\staging\\gat-9701001-s09\\episodes\\099\\collection\\inputs\\positionsFile.csv",
+      "sha256": "76d23463438c70c2aa8dc61d922cd9b700c25b7d89e9b2ea67c1f7318be983bc"
+    },
+    "loadsFile": {
+      "original_path": "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\evidence\\main_campaign_20261005_46adaca92be9\\staging\\gat-9701001-s09\\inputs\\099\\loads.csv",
+      "copied_path": "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\evidence\\main_campaign_20261005_46adaca92be9\\staging\\gat-9701001-s09\\episodes\\099\\collection\\inputs\\loadsFile.csv",
+      "sha256": "a3ccd267377d8e75670eec8b6c1abad76050465d118da121ef7eb31643517b33"
+    },
+    "qValuesFile": {
+      "original_path": "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\evidence\\main_campaign_20261005_46adaca92be9\\staging\\gat-9701001-s09\\inputs\\099\\qvalues.csv",
+      "copied_path": "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\evidence\\main_campaign_20261005_46adaca92be9\\staging\\gat-9701001-s09\\episodes\\099\\collection\\inputs\\qValuesFile.csv",
+      "sha256": "3d6e54dee76747e600c822ced9bbc7cdfe39d88d45af4aaf330da8ec484535c6"
+    }
+  },
+  "policy_model_sha256": "8ee272320906acb1232e6177f4709a8aae49ac75ef993b6faa36eb81b2d59fe0",
+  "decisions": 13,
+  "complete_acks": 13,
+  "policy_setup_reported_cpu_ns": 0,
+  "policy_setup_elapsed_ns": 1764900,
+  "controller_resources": {
+    "affinity": {
+      "process_mask": 4,
+      "system_mask": 65535
+    },
+    "initial_affinity": {
+      "process_mask": 4,
+      "system_mask": 65535
+    },
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "-1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "TF_NUM_INTRAOP_THREADS": "1",
+      "TF_NUM_INTEROP_THREADS": "1"
+    },
+    "torch_intraop_threads": 1,
+    "torch_interop_threads": 1,
+    "torch_version": "2.12.0+cpu",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "cpu_count": 16,
+    "device": "cpu",
+    "wsl_vcpu": 2,
+    "mapping_limitation": "WSL vCPU2 does not prove host physical-core identity"
+  },
+  "supervisor_sources": {
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\live_runtime.py": "c6d7d20bb6f70ec2233c5863ab203253984f5f3ba3f82af945b2eda0a77b555c",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\native_report.py": "c7c51742e6bbee43e37b742298ce53c59b0bee4845cf64df5c1e173567cb30b7",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\common_observation.py": "24eecdeadcc08b03a3600f1544b1ce0c2917701553cbeedf489d3d3391999c7c",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\policy_adapters.py": "b5480103a9764920ab78580e0495eccf3573454574630d1ced6b22da29ae03d4",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\ganet.py": "4750dfd9fc67366d046f50d8acafbd8abb0de7de3612be98eb0ef60a9d040b94",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\dgn_worker.py": "dabc4af0c195e71bb0d28507dd35b3eccd00fa9787acdd6e9a6ae0a69e8d7194",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\candidate_sources\\marl_gnn.py": "e6909c6139de6bafd39e46b6a4544f0e4a04710dc55d448366a90d25d796f7c4",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\candidate_sources\\raes.py": "8550ae7367f52f56a11c2bad913ac68fbe6b27f9d23aac9e55aeac002acb27a7",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\native_fixture_runner.py": "613aad76ab795c89a026cd441247cc2325d75413bc44fecc2a0ef3c50c1ac5a6",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\policy_capsule.py": "9f57d5918556b3b4817c115f4899d90e38c6ea5acc04a921da709032bdd35ae1",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\policy_timing.py": "afef6e4c2961507482938cf48197bc380a0fbb7abdb4fd5e50f0866329e4116f",
+    "D:\\Claude-workspace\\.worktrees\\v33-hybrid-execution\\research\\advisor-v3\\threeway_comparison_20261004\\campaign_resources.py": "07e258fb286b2398edf25e9a5de5a2c30d9a07268fc1b41feeed52f69708e32e"
+  },
+  "clock_info": {
+    "perf_counter": {
+      "implementation": "QueryPerformanceCounter()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    },
+    "process_time": {
+      "implementation": "GetProcessTimes()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 1e-07
+    }
+  },
+  "policy_capsule_manifest_sha256": "19cf7163b75d8c8382f1919cc83453753e17317ea786b89657d6ff2e5c840782",
+  "policy_capsule_kind": "GATRAES",
+  "planning_delay_estimand": "MEASURED_ELAPSED_FEATURE_POLICY_POST",
+  "timing_boundaries": {
+    "feature": "report decode/calibration/graph/features",
+    "decision": "input conversion + neural or RPC + validation + pressure/planning/action + evidence preparation",
+    "post": "complete action/phase validation and native command-vector encoding",
+    "excluded": "audit trace-file I/O and final measured-latency field insertion/pipe write",
+    "external_cpu": "reported native worker request-body CPU; worker phases are descriptive parts of RPC, never added to elapsed charge"
+  },
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "--exec",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+    "--library-path",
+    "/usr/lib/x86_64-linux-gnu",
+    "/usr/bin/taskset",
+    "-c",
+    "2",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+    "--inhibit-cache",
+    "--library-path",
+    "/home/wissarut/ns3_validation/advisor_v6_causal_safe_actuation_20260920/build/lib:/usr/lib/x86_64-linux-gnu",
+    "/mnt/d/Claude-workspace/.worktrees/v33-hybrid-execution/research/advisor-v3/threeway_comparison_20261004/native/builds/869b1e644f9c01fc80af/fixture",
+    "--output=/mnt/d/Claude-workspace/.worktrees/v33-hybrid-execution/research/advisor-v3/threeway_comparison_20261004/evidence/main_campaign_20261005_46adaca92be9/staging/gat-9701001-s09/episodes/099/collection/receiver.csv",
+    "--flowMonitorOutput=/mnt/d/Claude-workspace/.worktrees/v33-hybrid-execution/research/advisor-v3/threeway_comparison_20261004/evidence/main_campaign_20261005_46adaca92be9/staging/gat-9701001-s09/episodes/099/collection/flow.xml",
+    "--numNodes=15",
+    "--numChannels=4",
+    "--scaleRateByLoad=true",
+    "--executionMode=input",
+    "--payloadSize=1200",
+    "--simTime=10",
+    "--telemetryInterval=0.7",
+    "--useV31TrafficProfile=true",
+    "--enableRtsCts=false",
+    "--enableTelemetryGuard=false",
+    "--enableCapacityPacing=false",
+    "--forceHiddenCollision=false",
+    "--enableSounding=true",
+    "--enablePacketCohort=true",
+    "--enableQueueContinuity=true",
+    "--enableAdjacentExcitation=false",
+    "--enableChannelController=true",
+    "--enablePolicyBridge=true",
+    "--channelControlSchedule=external",
+    "--requiredCpu=2",
+    "--assignment=0,2,2,1,0,3,0,3,2,2,0,1,3,1,1",
+    "--scenario=baseline",
+    "--dataRate=8Mbps",
+    "--runNumber=9710099",
+    "--positionsFile=/mnt/d/Claude-workspace/.worktrees/v33-hybrid-execution/research/advisor-v3/threeway_comparison_20261004/evidence/main_campaign_20261005_46adaca92be9/staging/gat-9701001-s09/episodes/099/collection/inputs/positionsFile.csv",
+    "--loadsFile=/mnt/d/Claude-workspace/.worktrees/v33-hybrid-execution/research/advisor-v3/threeway_comparison_20261004/evidence/main_campaign_20261005_46adaca92be9/staging/gat-9701001-s09/episodes/099/collection/inputs/loadsFile.csv",
+    "--qValuesFile=/mnt/d/Claude-workspace/.worktrees/v33-hybrid-execution/research/advisor-v3/threeway_comparison_20261004/evidence/main_campaign_20261005_46adaca92be9/staging/gat-9701001-s09/episodes/099/collection/inputs/qValuesFile.csv"
+  ],
+  "native_resources": {
+    "pid": 554,
+    "cpus": [
+      2
+    ]
+  },
+  "calibration_digest": "9b20f05674c202bed6c1b9a913ab5ee82497b7d79ca44f8c7458cb572ccea8eb",
+  "exit_code": 0,
+  "elapsed_seconds": 80.57800000000861,
+  "epochs_without_complete_ack": [],
+  "application_rx_bytes": 60052800
+}
