@@ -5,5 +5,6 @@
   "all_selected_raw_members_read_to_eof_with_zip_crc_check": true,
   "raw_members": 2520,
   "native_or_training_started": false,
-  "metric_recomputation": "Run verify_selection.py separately; byte verification alone is not independent re-execution."
+  "metric_recomputation": "Run verify_selection.py separately; byte verification alone is not independent re-execution.",
+  "all_queue_members_match_frozen_audit_table": true
 }
